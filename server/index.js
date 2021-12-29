@@ -28,8 +28,9 @@ app.get('*', (req, res) => {
     }
     res.sendFile(path.join(buildDir, 'index.html'));
 });
-
+const http = require('http');
+const server = http.createServer(app);
 const port = process.env.PORT || 3000;
-app.listen(port);
+server.listen(port);
 
 console.log('React.JS App is running on the port ' + port);
