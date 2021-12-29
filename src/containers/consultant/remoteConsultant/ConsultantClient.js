@@ -262,7 +262,7 @@ class ConsultantClient extends Component {
             callAccpeted: true
         });
 
-        
+
         const peer = new Peer({ initiator: false, trickle: false, stream: stream });
         peer.on("signal", (data) => {
             if (this.props.patientInfo.firstName) {
@@ -481,22 +481,23 @@ class ConsultantClient extends Component {
                                 )
                             }
                         </div>
-                        {/* my video */}
+                        {/*  video call */}
                         <div className='call-remote-consultant'>
+                            {/* my video */}
                             <div className="camera-video" style={isOpenCamera ?
                                 { animation: "openCameraVideo .4s linear" } :
                                 { animation: "closeCameraVideo .2s linear", opacity: 0 }}>
                                 {stream && isOpenCamera && (
                                     <div className='frame-video'>
 
-                                        <video className='video-call' ref={this.myVideo} autoPlay controls ></video>
+                                        <video className='video-call' ref={this.myVideo} autoPlay controls muted></video>
 
                                     </div>
 
                                 )}
                             </div>
 
-
+                            {/* your firend video */}
                             <div className='your-friend-call-video'
                                 style={callAccpeted && !callEnded ?
                                     { animation: "openCameraVideo .4s linear" } :
