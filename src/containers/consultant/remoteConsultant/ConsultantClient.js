@@ -106,7 +106,7 @@ class ConsultantClient extends Component {
         }
         // open camera
 
-        navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true })
             .then(currentStream => {
 
                 this.setState({
@@ -261,6 +261,23 @@ class ConsultantClient extends Component {
         this.setState({
             callAccpeted: true
         });
+
+        this.setState({
+            isOpenCamera: true,
+        }, () => {
+            navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+                .then(currentStream => {
+                    console.log("test stream when start call", currentStream);
+                    this.setState({
+                        stream: currentStream
+                    });
+                    this.myVideo.current.srcObject = currentStream;
+                })
+                .catch(e => {
+                    console.log("loi khi mo camera", e);
+                });
+        });
+
         const peer = new Peer({ initiator: false, trickle: false, stream: stream });
         peer.on("signal", (data) => {
             if (this.props.patientInfo.firstName) {
