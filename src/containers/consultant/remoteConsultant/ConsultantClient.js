@@ -106,7 +106,7 @@ class ConsultantClient extends Component {
         }
         // open camera
 
-        navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true })
             .then(currentStream => {
 
                 this.setState({
@@ -215,21 +215,21 @@ class ConsultantClient extends Component {
     }
 
     callUserStart = (id) => {
-        this.setState({
-            isOpenCamera: true,
-        }, () => {
-            navigator.mediaDevices.getUserMedia({ audio: false, video: true })
-                .then(currentStream => {
-                    console.log("test stream when start call", currentStream);
-                    this.setState({
-                        stream: currentStream
-                    });
-                    this.myVideo.current.srcObject = currentStream;
-                })
-                .catch(e => {
-                    console.log("loi khi mo camera", e);
-                });
-        });
+        // this.setState({
+        //     isOpenCamera: true,
+        // }, () => {
+        //     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+        //         .then(currentStream => {
+        //             console.log("test stream when start call", currentStream);
+        //             this.setState({
+        //                 stream: currentStream
+        //             });
+        //             this.myVideo.current.srcObject = currentStream;
+        //         })
+        //         .catch(e => {
+        //             console.log("loi khi mo camera", e);
+        //         });
+        // });
 
         const { mySocketId, nameCaller, stream } = this.state
 
@@ -293,29 +293,29 @@ class ConsultantClient extends Component {
         this.setState({
             isOpenCamera: !this.state.isOpenCamera
         }, () => {
-            if (this.state.isOpenCamera) {
-                navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-                    .then(currentStream => {
-                        this.setState({
-                            stream: currentStream
-                        });
-                        this.myVideo.current.srcObject = currentStream;
-                    })
-                    .catch(e => {
-                        console.log("loi khi mo camera", e);
-                    })
-            } else {
-                navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-                    .then(currentStream => {
-                        this.setState({
-                            stream: currentStream
-                        });
-                        this.myVideo.current.srcObject = currentStream;
-                    })
-                    .catch(e => {
-                        console.log("loi khi mo camera false", e);
-                    })
-            }
+            // if (this.state.isOpenCamera) {
+            //     navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+            //         .then(currentStream => {
+            //             this.setState({
+            //                 stream: currentStream
+            //             });
+            //             this.myVideo.current.srcObject = currentStream;
+            //         })
+            //         .catch(e => {
+            //             console.log("loi khi mo camera", e);
+            //         })
+            // } else {
+            //     navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+            //         .then(currentStream => {
+            //             this.setState({
+            //                 stream: currentStream
+            //             });
+            //             this.myVideo.current.srcObject = currentStream;
+            //         })
+            //         .catch(e => {
+            //             console.log("loi khi mo camera false", e);
+            //         })
+            // }
         })
     }
 
@@ -323,29 +323,29 @@ class ConsultantClient extends Component {
         this.setState({
             isOpenMicro: !this.state.isOpenMicro
         }, () => {
-            if (this.state.isOpenMicro) {
-                navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-                    .then(currentStream => {
-                        this.setState({
-                            stream: currentStream
-                        });
-                        this.myVideo.current.srcObject = currentStream;
-                    })
-                    .catch(e => {
-                        console.log("loi khi mo camera", e);
-                    })
-            } else {
-                navigator.mediaDevices.getUserMedia({ audio: false, video: true })
-                    .then(currentStream => {
-                        this.setState({
-                            stream: currentStream
-                        });
-                        this.myVideo.current.srcObject = currentStream;
-                    })
-                    .catch(e => {
-                        console.log("loi khi mo camera false", e);
-                    })
-            }
+            // if (this.state.isOpenMicro) {
+            //     navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+            //         .then(currentStream => {
+            //             this.setState({
+            //                 stream: currentStream
+            //             });
+            //             this.myVideo.current.srcObject = currentStream;
+            //         })
+            //         .catch(e => {
+            //             console.log("loi khi mo camera", e);
+            //         })
+            // } else {
+            //     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+            //         .then(currentStream => {
+            //             this.setState({
+            //                 stream: currentStream
+            //             });
+            //             this.myVideo.current.srcObject = currentStream;
+            //         })
+            //         .catch(e => {
+            //             console.log("loi khi mo camera false", e);
+            //         })
+            // }
         })
     }
 
