@@ -75,7 +75,7 @@ class App extends Component {
 
                         <span className="content-container">
                             <Switch>
-                                
+                                <Route path={path.HOMEPAGE} component={Homepage} />
                                 <Route path="/medical-specialty/:id" component={MedicalSpecialty} />
                                 <Route path="/remote-consultant/:id" component={ConsultantClient} />
                                 <Route path="/doctor-detail-id/:id" component={DoctorDetail} />
@@ -90,9 +90,9 @@ class App extends Component {
                                 <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
 
                                 <Route path="/verify-token-appointment" component={ConfirmAppointment} />
-                                
-                                <Route path={path.HOMEPAGE} component={Homepage} />
-                                <Route path="/" component={Homepage} />
+
+
+
                             </Switch>
 
                         </span>
