@@ -1,0 +1,109 @@
+{
+    "header": {
+        "specailty": "Specailty",
+        "describe-specailty": "Find a doctor by specialty",
+        "healthfacilities": "Health facilities",
+        "choose": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "chooseGudDoc": "Choose a good Doctor",
+        "package": "Package",
+        "check": "General health check",
+        "support": "Support",
+        "title1": "BASIS MEDICAL",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "title411": "Specialist ",
+        "title412": "Examination",
+        "title421": "Remote ",
+        "title422": "Examination",
+        "title431": "General ",
+        "title432": "Examination",
+        "title441": "Medical",
+        "title442": "Tests",
+        "title451": "Dental",
+        "title452": "Examination",
+        "title461": "Mental",
+        "title462": "Health",
+        "doctorOptions": {
+            "adjust": "adjust Infomation doctor",
+            "chooseDr": "choose doctor",
+            "info": "introduction",
+            "update": "update infomation",
+            "chooseSpecialty": "Choose Medical Specialty",
+            "chooseClinic": "Choose Clinic"
+        }
+    },
+    "loginHeader": {
+        "welcome": "Welcome"
+    },
+    "menu": {
+        "system": {
+            "header": "Manager Users",
+            "system-administrator": {
+                "header": "System Administrator",
+                "user-manage": "User manage",
+                "product-manage": "Package manage",
+                "register-package-group-or-account": "Register service for account by redux",
+                "manager-doctor": "Manager Doctor",
+                "appointment": "Appointment",
+                "medical-specailty": "Manage Medical Specailty",
+                "consultation": "Remote Consultant",
+                "manage-profile-consultant": "Manage Profile Consultant"
+            },
+            "system-parameter": {
+                "header": "System-parameter"
+            },
+            "headerTitle2": "Clinics",
+            "headerTitle3": "Specaility",
+            "headerTitle4": "HandBook",
+            "headerTitle5": "Appointment"
+        }
+    },
+    "schedules": {
+        "header": "Doctor's Schedules",
+        "chooseDate": "Choose Appointment"
+    },
+    "gender": "Gender",
+    "position": "Position",
+    "role": "Role",
+    "crudBtn": {
+        "save": "Save",
+        "submit": "Submit"
+    },
+    "doctor-outstanding": {
+        "schedules": "Appointments",
+        "choose": "Choose",
+        "book": "and Order (Free)"
+    },
+    "main-title-admin": {
+        "specialty": {
+            "titleSpecialty": "Create Medical Specialty",
+            "consultation": "Manage Remote Consultant",
+            "profileConsultation": {
+                "title": "Manage Profile Consultant",
+                "chooseProfile": "Choose Profile",
+                "infoIntro": "Introduce Infomation",
+                "chooseConsultant": "Choose Type Consultant",
+                "chooseClinic": "Choose Clinic",
+                "UpdateInfo": "Update Infomation"
+            }
+        }
+    },
+    "main-content-admin": {
+        "medical-specialty": {
+            "name": "Name Medical Specialty",
+            "image": "Picture about specialty",
+            "uploadImg": "Upload Image",
+            "ckEditor": "Description Specialty"
+        },
+        "consultant": {
+            "name": "Title Consultant",
+            "image": "Image",
+            "uploadImg": "Upload",
+            "ckEditor": "Infomation Consultant"
+        }
+    },
+    "see-more": {
+        "open": "Read More",
+        "hidden": "Hidden"
+    }
+}

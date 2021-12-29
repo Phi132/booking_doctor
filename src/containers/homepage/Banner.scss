@@ -1,0 +1,241 @@
+.banner-area {
+    width: 100%;
+    background: url("../../assets/images/bookingcare-cover-4.jpg") center no-repeat;
+    height: 507px;
+    background-size: cover;
+    position: relative;
+    .banner--overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.12);
+        .banner-content {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 5;
+            .banner-item-1 {
+                height: 25%;
+                text-transform: uppercase;
+                font-size: 30px;
+                letter-spacing: 2px;
+                color: white;
+                text-shadow: 1px 0 0 rgb(0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                .title-2-item-2 {
+                    font-weight: 600;
+                }
+            }
+            .banner-item-2 {
+                height: 25%;
+
+                .search-btn {
+                    display: flex;
+                    align-items: center;
+
+                    background-color: #f7d800;
+                    border-radius: 999px;
+                    margin: 10px auto 0;
+                    width: 456px;
+                    height: 50px;
+                    .search-icon {
+                        font-size: 18px;
+                        height: 50px;
+                        width: 50px;
+                        line-height: 50px;
+                    }
+                    .input-search {
+                        input {
+                            width: 350px;
+                            background-color: unset;
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            .banner-item-3 {
+                height: 25%;
+                .banner-download {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .android {
+                        background: url("https://bookingcare.vn/assets/icon/google-play-badge.svg") no-repeat center;
+                        background-size: cover;
+                        width: 108px;
+                        height: 32px;
+                        margin-right: 20px;
+                        cursor: pointer;
+                    }
+                    .ios {
+                        background: url("https://bookingcare.vn/assets/icon/app-store-badge-black.svg") no-repeat center;
+                        background-size: cover;
+                        width: 108px;
+                        height: 32px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .banner-item-4 {
+                height: 25%;
+                background-image: linear-gradient(transparent, white);
+                .list-banner-item-4 {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    padding-left: 0;
+                    .list--item1 {
+                        min-width: 150px;
+                        font-size: 16px;
+                        margin: 25px 5px;
+                        .banner4-icon1 {
+                            background-image: url("https://bookingcare.vn/assets/anh/kham_chuyenkhoa.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin: 2px auto;
+                            background-size: 32px;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                        .banner4-title1 {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .banner4-title1:hover {
+                            color: #45c3d2;
+                        }
+                    }
+                    .list--item2 {
+                        min-width: 150px;
+                        font-size: 16px;
+                        margin: 25px 5px;
+                        .banner4-icon2 {
+                            background-image: url("https://bookingcare.vn/assets/anh/kham_tuxa.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin: 2px auto;
+                            background-size: 32px;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                        .banner4-title2 {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .banner4-title2:hover {
+                            color: #45c3d2;
+                        }
+                    }
+                    .list--item3 {
+                        min-width: 150px;
+                        font-size: 16px;
+                        margin: 25px 5px;
+                        .banner4-icon3 {
+                            background-image: url("https://bookingcare.vn/assets/anh/kham_tongquat.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin: 2px auto;
+                            background-size: 32px;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                        .banner4-title3 {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .banner4-title3:hover {
+                            color: #45c3d2;
+                        }
+                    }
+                    .list--item4 {
+                        min-width: 150px;
+                        font-size: 16px;
+                        margin: 25px 5px;
+                        .banner4-icon4 {
+                            background-image: url("https://bookingcare.vn/assets/anh/dichvu_xetnghiem.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin: 2px auto;
+                            background-size: 32px;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                        .banner4-title4 {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .banner4-title4:hover {
+                            color: #45c3d2;
+                        }
+                    }
+                    .list--item5 {
+                        min-width: 150px;
+                        font-size: 16px;
+                        margin: 25px 5px;
+                        .banner4-icon5 {
+                            background-image: url("https://bookingcare.vn/assets/anh/kham_nhakhoa.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin: 2px auto;
+                            background-size: 32px;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                        .banner4-title5 {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .banner4-title5:hover {
+                            color: #45c3d2;
+                        }
+                    }
+                    .list--item6 {
+                        min-width: 150px;
+                        font-size: 16px;
+                        margin: 25px 5px;
+                        .banner4-icon6 {
+                            background-image: url("https://bookingcare.vn/assets/anh/suckhoe_tinhthan.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin: 2px auto;
+                            background-size: 32px;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                        .banner4-title6 {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .banner4-title6:hover {
+                            color: #45c3d2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

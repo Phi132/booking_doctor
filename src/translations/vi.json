@@ -1,0 +1,109 @@
+{
+    "header": {
+        "specailty": "Chuyên Khoa",
+        "describe-specailty": "Tìm bác sĩ theo chuyên khoa",
+        "healthfacilities": "Cơ sở y tế",
+        "choose": "Chọn bệnh viện phòng khám",
+        "doctor": "Bác Sĩ",
+        "chooseGudDoc": "Chọn Bác Sĩ giỏi",
+        "package": "Gói Khám",
+        "check": "Khám sức khỏe tổng quát",
+        "support": "Hỗ Trợ",
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "title411": "Khám",
+        "title412": "chuyên khoa",
+        "title421": "Khám",
+        "title422": "từ xa",
+        "title431": "Khám",
+        "title432": "tổng quát",
+        "title441": "Xét nghiệm",
+        "title442": "y học",
+        "title451": "Khám",
+        "title452": "nha khoa",
+        "title461": "Sức khỏe",
+        "title462": "tinh thần",
+        "doctorOptions": {
+            "adjust": "Chỉnh Sửa Thông Tin Bác Sĩ",
+            "chooseDr": "Chọn Bác Sĩ",
+            "info": "Thông Tin Giởi Thiệu",
+            "update": "Cập Nhật Thông Tin",
+            "chooseSpecialty": "Chọn Chuyên Khoa Khám",
+            "chooseClinic": "Chọn Phòng Khám"
+        }
+    },
+    "loginHeader": {
+        "welcome": "Xin Chào"
+    },
+    "menu": {
+        "system": {
+            "header": "Ngưới Dùng",
+            "system-administrator": {
+                "header": "Quản trị hệ thống",
+                "user-manage": "Quản lý người sử dụng",
+                "product-manage": "Quản lý gói",
+                "register-package-group-or-account": "Đăng ký tài khoản bằng redux",
+                "manager-doctor": "Quản Lý Thông Tin Bác Sĩ",
+                "appointment": "Appointment",
+                "medical-specailty": "Tạo Chuyên Ngành Khám Bệnh",
+                "consultation": "Tạo Tư Vấn Từ Xa",
+                "manage-profile-consultant": "Quản Lí Hồ Sơ Tư Vấn"
+            },
+            "system-parameter": {
+                "header": "Tham số hệ thống"
+            },
+            "headerTitle2": "Phòng Khám",
+            "headerTitle3": "Chuyên Khoa",
+            "headerTitle4": "Cẩm Nang",
+            "headerTitle5": "Lịch Khám"
+        }
+    },
+    "schedules": {
+        "header": "Lịch Trình Bác Sĩ",
+        "chooseDate": "Chọn Ngày Khám"
+    },
+    "gender": "Giới Tính",
+    "position": "Chức Vụ",
+    "role": "Vai Trò",
+    "crudBtn": {
+        "save": "Lưu",
+        "submit": "Tạo"
+    },
+    "doctor-outstanding": {
+        "schedules": "Lịch khám",
+        "choose": "Chọn",
+        "book": "và Đặt (miễn phí)"
+    },
+    "main-title-admin": {
+        "specialty": {
+            "titleSpecialty": "Tạo Chuyên Khoa",
+            "consultation": "Tạo Tư Vấn Từ Xa",
+            "profileConsultation": {
+                "title": "Quản Lí Hồ Sơ Tư Vấn Từ Xa",
+                "chooseProfile": "Chọn Hồ Sơ",
+                "infoIntro": "Thông Tin Giới Thiệu",
+                "chooseConsultant": "Chọn Mục Tư Vấn",
+                "chooseClinic": "Chọn Phòng Khám",
+                "UpdateInfo": "Cập Nhật Thông Tin"
+            }
+        }
+    },
+    "main-content-admin": {
+        "medical-specialty": {
+            "name": "Tên Chuyên Khoa",
+            "image": "Hinh Mô Tả",
+            "uploadImg": "Tải Ảnh",
+            "ckEditor": "Thông Tin Chuyên Khoa"
+        },
+        "consultant": {
+            "name": "Tên Mục Tư Vấn",
+            "image": "Hinh Mô Tả",
+            "uploadImg": "Tải Ảnh",
+            "ckEditor": "Thông Tin Tư Vấn"
+        }
+    },
+    "see-more": {
+        "open": "Đọc Thêm",
+        "hidden": "Ẩn Đi"
+    }
+}

@@ -1,0 +1,404 @@
+.description-top {
+    font-family: Montserrat, sans-serif !important;
+    background: center center no-repeat;
+    background-size: cover;
+
+    .overlay {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+        padding-top: 20px;
+        .container {
+            .content-top {
+                .main-content-top {
+                    transition: all 0.3s ease;
+
+                    overflow: hidden;
+                    .title-content-top {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+                .see-more {
+                    padding: 15px 0;
+                    span {
+                        font-size: 17px;
+                        color: rgb(13, 166, 226);
+                        font-weight: 600;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes openSeeMore {
+    0% {
+        height: 200px;
+    }
+    50% {
+        height: calc(200px + 50px);
+    }
+    75% {
+        height: calc(200px + 200px);
+    }
+    100% {
+        height: auto;
+    }
+}
+@keyframes closeSeeMore {
+    0% {
+        height: auto;
+    }
+    25% {
+        height: calc(500px - 100px);
+    }
+    75% {
+        height: calc(500px - 200px);
+    }
+    100% {
+        height: 200px;
+    }
+}
+
+.main-container {
+    .container {
+        .select-location {
+            padding-top: 20px;
+            margin-bottom: 20px;
+            .selected {
+                padding: 10px;
+                outline: none;
+            }
+        }
+
+        .infomation-doctor {
+            display: flex;
+            width: 1140px;
+            // height: 493px;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 1px solid seagreen;
+            border-radius: 8px;
+            box-shadow: 0 0 24px -12px black;
+            .infomation-doctor-right {
+                width: 50%;
+                height: 100%;
+                .detail-doctor {
+                    .info-doctor {
+                        .name-doctor {
+                            cursor: pointer;
+                        }
+                        .description-doctor {
+                            width: 90% !important;
+                        }
+                    }
+                }
+            }
+            .infomation-doctor-left {
+                width: 50%;
+                height: 100%;
+                margin-left: 10px;
+
+                .info__schedules {
+                    .appointment-left {
+                        .btn-data {
+                            width: 135px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.call-remote-consultant {
+    position: relative;
+    margin-top: 30px;
+    background-color: #d8e9f5;
+    box-shadow: 0 0 26px -7px black;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .camera-video {
+        width: 200px;
+        height: 150px;
+        border: 1px solid rgba(241, 172, 172, 0.9);
+        border-radius: 8px;
+        transform-origin: top right;
+        margin-left: 6px;
+        position: absolute;
+        top: 27px;
+        right: 311px;
+        z-index: 100;
+        transform-origin: top right;
+        overflow: hidden;
+
+        transform-origin: top right;
+        // transition: all 0.2s linear;
+        .frame-video {
+            .my-video-call {
+                font-size: 24px;
+                font-weight: 600;
+                color: #cce6ff;
+            }
+            .video-call {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .your-friend-call-video {
+        width: 1024px;
+        height: 600px;
+
+        .your-friend-calling {
+            height: 520px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            padding: 4px;
+            .your-friend-name {
+                font-size: 24px;
+                font-weight: 600;
+                color: #e6fef0;
+            }
+            .video-call {
+                height: 92%;
+                width: 96%;
+            }
+        }
+        .nav-controll-call-video {
+            width: 100%;
+            padding-top: 10px;
+            .controll-call-list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                li {
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                    text-align: center;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+                    margin: 10px;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.5s;
+                    color: #07c5b9;
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
+                }
+                .control-call-item-3 {
+                    color: #fd494a;
+                    i {
+                        transform: rotate(225deg);
+                    }
+                }
+            }
+        }
+    }
+    .chat-box-area {
+        background-color: #ffffff;
+        width: 272px;
+        height: 520px;
+        padding: 15px 10px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        .title-chat-box {
+            height: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+            span {
+                font-size: 20px;
+                font-weight: 600;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        }
+        .chat-content {
+            height: 380px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            // custom scroll bar
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                background-color: #f5f5f5;
+            }
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #f5f5f5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #000000;
+            }
+
+            .orther-text {
+                display: flex;
+                width: 88%;
+                margin-bottom: 10px;
+                .orther-mess-avt {
+                    background: url("https://i.pinimg.com/originals/63/6f/c4/636fc4782e0e838cbae9039b21f5cf9d.png");
+                    height: 50px;
+                    width: 26%;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                .orther-mess-content {
+                    width: 80%;
+                    margin-left: 14px;
+                    background-color: #6ae432;
+                    padding: 6px;
+                    border-radius: 8px;
+                }
+            }
+            .my-text {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-bottom: 10px;
+                .my-text-container {
+                    width: 80%;
+                    display: flex;
+
+                    .my-mess-content {
+                        width: 80%;
+                        margin-right: 10px;
+                        background-color: #27e7da;
+                        border-radius: 8px;
+                        padding: 6px;
+                    }
+                    .my-mess-avt {
+                        background: url("https://i.pinimg.com/736x/00/54/da/0054dacd786d58e8705f34e96d037539.jpg");
+                        height: 50px;
+                        width: 26%;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .type-chat {
+            height: 70px;
+            padding: 10px;
+            .input-mess-content {
+                position: relative;
+                width: 100%;
+                border: 1px solid rgb(129, 127, 255);
+                border-radius: 8px;
+                padding: 2px;
+                input {
+                    border: none;
+                    height: 40px;
+                    width: 180px;
+                    &::placeholder {
+                        color: black;
+                    }
+                }
+                .icon-send-mess {
+                    position: absolute;
+                    top: 4px;
+                    right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    background-color: #07c5b9;
+                    text-align: center;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    i {
+                        font-size: 18px;
+                        line-height: 35px;
+                        color: white;
+                        transform: translateX(-1px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// doctor info
+
+.space-footer {
+    height: 500px;
+}
+.call-consultant {
+    z-index: 1;
+    position: relative;
+    font-size: 16px;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+}
+
+.call-consultant:hover {
+    cursor: pointer;
+}
+
+.call-consultant::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 4px solid hsl(236, 32%, 26%);
+    transform-origin: center;
+    transform: scale(1);
+}
+
+.call-consultant:hover::before {
+    transition: all 0.75s ease-in-out;
+    transform-origin: center;
+    transform: scale(1.75);
+    opacity: 0;
+}
+
+@keyframes openCameraVideo {
+    0% {
+        transform: scale(0, 0);
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+    90% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@keyframes closeCameraVideo {
+    0% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+}

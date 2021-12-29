@@ -1,0 +1,160 @@
+.day-section {
+    margin-top: 14px;
+    .select-day {
+        font-size: 15px;
+        outline: none;
+        font-weight: 600;
+        color: teal;
+        border: unset;
+        border-bottom: 2px solid darkslateblue;
+        background-color: transparent;
+        height: 28px;
+        text-transform: uppercase;
+    }
+}
+.title-appointment {
+    display: flex;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    .icon-appointment {
+        margin-right: 6px;
+        font-size: 15px;
+    }
+    .text-title {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        color: teal;
+    }
+}
+.info__schedules {
+    margin-top: 10px;
+    display: flex;
+    .appointment-left {
+        width: 780px;
+        min-height: 100px;
+        .btn-data {
+            height: 35px;
+            width: 140px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            background-color: #c869e7;
+            &:hover {
+                background-color: #d689f1;
+            }
+        }
+        .booking {
+            font-weight: 500;
+            margin-top: 10px;
+            .choose {
+            }
+            i {
+                margin: 0 5px;
+            }
+            .book {
+            }
+        }
+    }
+    .devide-slash {
+        width: 1px;
+        height: auto;
+        background-color: royalblue;
+        margin: 0 30px 0 10px;
+    }
+    .appointment-right {
+        width: 600px;
+        min-height: 100px;
+        .address-clinic {
+            border-bottom: 1px solid royalblue;
+            margin-bottom: 6px;
+            .title-address-clinic {
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .name-clinic {
+                font-weight: 700;
+                text-transform: capitalize;
+                margin-bottom: 6px;
+            }
+            .adress {
+                margin-bottom: 6px;
+            }
+        }
+        .price-clinic {
+            display: flex;
+            .price1 {
+                font-weight: 600;
+            }
+            .see-more {
+                color: royalblue;
+                margin-left: 10px;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .open-see-more {
+            border: 1px solid red;
+            margin-top: 10px;
+            padding: 8px;
+            .title-see-more-1 {
+                display: flex;
+                .price11 {
+                    text-transform: capitalize;
+                    line-height: 27px;
+                    margin-right: 5px;
+                }
+                .price1.price-detail {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .btn-close-see-more {
+            margin-top: 10px;
+            font-weight: 600;
+            color: rgb(15, 100, 211);
+            text-decoration: underline;
+            .close-board-price {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// nodal
+.gender {
+    margin: 8px 0 8px 10px;
+    width: 25%;
+    form {
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+        #gender_male {
+            align-items: center;
+            margin-bottom: unset;
+        }
+        #gender_female {
+            align-items: center;
+            margin-bottom: unset;
+        }
+        .label-gender-1,
+        .label-gender-2 {
+            align-items: center;
+            margin-bottom: unset;
+        }
+    }
+}
+.btn-close-order-modal,
+.btn-close-confirm-modal {
+    box-sizing: content-box;
+    padding: 6px;
+}
+.modal-content {
+    border-radius: 12px;
+}
+
+.d-none{
+    display: none;
+}

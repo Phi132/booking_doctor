@@ -1,0 +1,63 @@
+@import "../../styles/common.scss";
+
+.header-tabs-container {
+    position: fixed;
+    z-index: 200;
+    width: 240px;
+    height: 100%;
+    margin: 0;
+    background-color: #3a4651;
+    padding: 0 10px;
+}
+.header-container {
+    position: fixed;
+    z-index: 200;
+    display: flex;
+
+    justify-content: space-between;
+    background-color: #d7dde4;
+    color: white;
+    height: 60px;
+    width: 82%;
+    margin-left: 240px;
+    .btn-logout {
+        color: $common-text-color;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 10px;
+        &:hover {
+            background-color: darken($colormain, 5);
+        }
+        i {
+            font-size: $base-size + 1px;
+        }
+    }
+}
+.right-header-container {
+    display: flex;
+    align-items: center;
+    .welcom-user {
+        margin-right: 10px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #3a4651;
+    }
+    .changeLanguage {
+        margin-right: 20px;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.3);
+        .changeLanguageVI {
+            margin-right: 10px;
+            font-weight: 600;
+            &.active {
+                color: rgb(238, 44, 44);
+            }
+        }
+        .changeLanguageEN {
+            font-weight: 600;
+            &.active {
+                color: rgb(0, 195, 255);
+            }
+        }
+    }
+}

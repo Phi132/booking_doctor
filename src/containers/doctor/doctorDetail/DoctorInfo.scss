@@ -1,0 +1,20 @@
+.detail-doctor {
+    display: flex;
+    .img-doctor {
+        height: 120px;
+        width: 120px;
+        padding: 10px;
+        cursor: pointer;
+        .img {
+            height: 100px;
+            width: 100px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+    }
+    .description-doctor {
+        width: 500px;
+        text-align: justify;
+    }
+}

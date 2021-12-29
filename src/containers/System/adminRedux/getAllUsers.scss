@@ -1,0 +1,100 @@
+.styled-table {
+    border-collapse: collapse;
+    max-width: 1050px;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.end {
+    height: 500px;
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.deleteUser {
+    position: relative;
+    background-color: crimson;
+    padding: 10px;
+    font-weight: 600;
+}
+.options {
+    text-align: center;
+}
+.deleteUser::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #fc2f70;
+    transform-origin: center right;
+    transform: scaleX(0) translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.deleteUser:hover {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+.deleteUser:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1) translateY(-50%);
+}
+.EditUser {
+    position: relative;
+    background-color: rgb(20, 157, 220);
+    padding: 10px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.EditUser::before,
+.EditUser::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #3cefff;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.EditUser::before {
+    top: 0;
+}
+
+.EditUser::after {
+    bottom: 0;
+}
+
+.EditUser:hover::before,
+.EditUser:hover::after {
+    transform-origin: center left;
+    transform: scaleX(1);
+}

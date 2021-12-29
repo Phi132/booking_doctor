@@ -1,0 +1,120 @@
+.ck-content {
+    min-height: 400px;
+}
+.CKeditorInfo {
+    margin-left: 243px;
+    margin-right: 1px;
+    padding: 100px 40px 60px 40px;
+
+    .title-manager-doctor {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: #004b99;
+        text-transform: uppercase;
+    }
+    .edit-doctor {
+        background-color: #fbf1ff;
+        box-shadow: 0 5px 5px 0px #000;
+        padding: 40px;
+        border-radius: 8px;
+        .select-area {
+            width: 100%;
+            right: 0%;
+
+            display: flex;
+            margin-bottom: 30px;
+
+            label {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                width: 15%;
+            }
+            .select-doctor {
+                width: 70%;
+                border-radius: 8px;
+                transform: translateX(16px);
+                z-index: 50;
+            }
+        }
+        .content-text {
+            width: 100%;
+            right: 0%;
+            z-index: 100;
+            display: flex;
+            margin-bottom: 30px;
+            label {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                width: 15%;
+            }
+            textarea {
+                width: 70%;
+                border-radius: 8px;
+                transform: translateX(16px);
+            }
+        }
+        .specialty-clinic-area {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+            .select-area-specialty {
+                width: 30%;
+                label {
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+
+            .select-area-clinic {
+                width: 30%;
+                label {
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .ckeditor-area {
+            width: 100%;
+            right: 0%;
+            z-index: 100;
+
+            display: flex;
+            margin-bottom: 30px;
+
+            label {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                width: 15%;
+            }
+            .edit {
+                width: 70%;
+                border-radius: 8px;
+                z-index: 0 !important;
+                transform: translateX(16px);
+            }
+        }
+        .submit-btn {
+            z-index: 1;
+            position: fixed;
+            right: 55px;
+            top: 200px;
+            font-size: inherit;
+            font-family: inherit;
+            width: 64px;
+            height: 42px;
+            color: white;
+            outline: none;
+            border: none;
+            background-color: #2d3058;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+}

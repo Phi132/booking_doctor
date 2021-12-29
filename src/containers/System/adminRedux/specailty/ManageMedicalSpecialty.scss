@@ -1,0 +1,112 @@
+.main-medical-specailty {
+    margin-left: 243px;
+    margin-right: 1px;
+    padding: 100px 40px 60px 40px;
+    position: relative;
+
+    .title-main {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: #004b99;
+        text-transform: uppercase;
+    }
+
+    .manage-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #fbf1ff;
+        box-shadow: 0 5px 5px 0px #000;
+        padding: 40px;
+        border-radius: 8px;
+        .name-specialty {
+            width: 100%;
+            right: 0%;
+            z-index: 100;
+            display: flex;
+            margin-bottom: 30px;
+            .name-medical-specialty {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                width: 15%;
+            }
+            .input-name-medical-specialty {
+                width: 70%;
+                transform: translateX(16px);
+                input {
+                    border-radius: 8px;
+                    &::placeholder {
+                        color: #004b99;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .image-specialty {
+            width: 100%;
+            right: 0%;
+            z-index: 100;
+            display: flex;
+            margin-bottom: 30px;
+            .title-upload-img {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                width: 15%;
+            }
+        }
+        .ckEditor-specialty {
+            label {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    .btn-submit-specialty {
+        z-index: 190;
+        position: fixed;
+        right: 55px;
+        top: 200px;
+        font-size: inherit;
+        font-family: inherit;
+        text-align: center;
+        width: 68px;
+        height: 42px;
+        outline: none;
+        border: none;
+        background-color: #2d3058;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            animation: jelly linear 0.5s;
+            transition: all 0.5s linear;
+        }
+        .submit-btn-specialty {
+            font-size: 16px;
+            line-height: 38px;
+            font-weight: 600;
+            background-color: transparent;
+            color: white;
+            margin: unset !important;
+        }
+    }
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}

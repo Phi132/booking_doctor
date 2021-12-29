@@ -1,0 +1,180 @@
+body {
+    background-color: #ddd;
+}
+.submit-btn {
+    height: 40px;
+    width: 80px;
+}
+.btn-upload-image {
+    width: 80px;
+    height: 35px;
+    z-index: 1;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: unset;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    .label-upload-image {
+        width: inherit;
+        height: inherit;
+        line-height: 35px;
+    }
+}
+
+.btn-upload-image::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+.btn-upload-image:hover {
+    cursor: pointer;
+    color: #161616;
+}
+
+.btn-upload-image:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+.preview-image {
+    width: 200px;
+    height: 200px;
+    border: 1px red solid;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+// css cho btn submit
+.btn-submit {
+    line-height: 18px;
+}
+.submit-btn,
+.edit-btn {
+    z-index: 1;
+    font-size: inherit;
+    font-family: inherit;
+    width: 64px;
+    height: 42px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+}
+
+.submit-btn:hover,
+.edit-btn:hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+//css for input
+.input-area {
+    position: relative;
+}
+.form-control:focus {
+    box-shadow: unset;
+}
+input {
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: #ffffff;
+    padding: 0.35em 0.45em;
+    border: 1px solid #000000f2;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input {
+    outline: none !important;
+}
+
+input::placeholder {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.top,
+.bottom,
+.left,
+.right {
+    position: absolute;
+    background-color: #0f92e9;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+.bottom,
+.top {
+    height: 2px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+}
+
+.left,
+.right {
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0);
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+input:focus ~ .top,
+input:focus ~ .bottom {
+    transform: scaleX(1);
+}
+
+input:focus ~ .left,
+input:focus ~ .right {
+    transform: scaleY(1);
+}
+.container-manager-redux {
+    margin-left: 243px;
+    margin-right: 1px;
+    padding: 100px 40px 60px 40px;
+}

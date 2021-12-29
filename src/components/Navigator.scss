@@ -1,0 +1,108 @@
+@import "../styles/common.scss";
+
+.navigator-menu {
+    margin-top: 90px;
+    &.list-unstyled,
+    .list-unstyled {
+        list-style-type: none;
+    }
+    .menu-group {
+        position: relative;
+        background-color: #85ce36;
+        transition: all 0.5s linear;
+        margin: 10px 0;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        &:hover {
+            cursor: pointer;
+            background-color: #70af2d;
+            .menu-list {
+                transition: transform 0.5s linear;
+                transform: rotateX(0deg);
+                transform-origin: top;
+                visibility: unset;
+            }
+        }
+        .menu-group-name {
+            line-height: 40px;
+            padding: 0 15px;
+            
+        }
+        .menu-list {
+            display: block;
+            visibility: hidden;
+            background-color: $bg-menu-color;
+            box-shadow: 2px 2px 4px 0 $box-shadow-color;
+            -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+            color: $text-in-light;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 220px;
+            transform: rotateX(90deg);
+            width: 216px;
+            transition: all 0.5s linear;
+            transform-origin: top;
+            .menu {
+                width: 215px;
+                padding: 0 15px;
+                line-height: 35px;
+                text-transform: none;
+                .menu-link {
+                    text-decoration: none;
+                    color: $text-in-light;
+                }
+                .sub-menu-list {
+                    display: none;
+                    background-color: $bg-menu-color;
+                    box-shadow: 2px 2px 4px 0 $box-shadow-color;
+                    -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+                    position: absolute;
+                    top: 0;
+                    left: 205px;
+                    padding: 0;
+                    .sub-menu {
+                        padding: 0 15px;
+                        height: 35px;
+                        line-height: 35px;
+                        white-space: nowrap;
+                        &:hover {
+                            background-color: darken($bg-menu-color, 5);
+                        }
+                        .sub-menu-link {
+                            text-decoration: none;
+                            color: $text-in-light;
+                        }
+                        a {
+                            display: block;
+                        }
+                        &.active a {
+                            font-weight: 500;
+                            color: $colormain;
+                        }
+                    }
+                }
+                &.active {
+                    border: 3px solid #c531a9;
+                }
+                &.active a {
+                    font-weight: 500;
+                    color: $colormain;
+                }
+                &:hover {
+                    background-color: darken($bg-menu-color, 3);
+                    .sub-menu-list {
+                        display: block;
+                    }
+                }
+                .icon-right {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
