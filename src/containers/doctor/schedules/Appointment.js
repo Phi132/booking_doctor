@@ -240,12 +240,10 @@ class Appointment extends Component {
             emailPatient, AllCodesValueTime, dateAppointment } = this.state;
         var { language } = this.props;
 
-        let submitInfo = await services.submitPatientInfo(orderDetail);
+
 
         this.props.isLoading(true);
-        // this.setState({
-        //     isLoading: true
-        // })
+
 
         let sendEmail = await services.sendEmailToPatient({
             namePatient,
@@ -261,10 +259,10 @@ class Appointment extends Component {
             date: orderDetail[0].date,
             timetype: orderDetail[0].timetype,
 
-        })
-        // this.setState({
-        //     isLoading: false,
-        // })
+        });
+
+        let submitInfo = await services.submitPatientInfo(orderDetail);
+        
         this.props.isLoading(false);
 
         if (submitInfo.data && submitInfo.data.submit &&
