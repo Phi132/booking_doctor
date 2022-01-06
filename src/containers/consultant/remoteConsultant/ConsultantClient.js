@@ -216,21 +216,19 @@ class ConsultantClient extends Component {
     }
 
     callUserStart = (id) => {
-        // this.setState({
-        //     isOpenCamera: true,
-        // }, () => {
-        //     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
-        //         .then(currentStream => {
-        //             console.log("test stream when start call", currentStream);
-        //             this.setState({
-        //                 stream: currentStream
-        //             });
-        //             this.myVideo.current.srcObject = currentStream;
-        //         })
-        //         .catch(e => {
-        //             console.log("loi khi mo camera", e);
+
+        // navigator.mediaDevices.getUserMedia({ audio: this.state.isOpenMicro, video: this.state.isOpenCamera })
+        //     .then(currentStream => {
+
+        //         this.setState({
+        //             stream: currentStream
         //         });
-        // });
+        //         this.myVideo.current.srcObject = currentStream;
+        //     })
+        //     .catch(e => {
+        //         console.log("loi khi mo camera", e);
+        //     });
+
 
         const { mySocketId, nameCaller, stream } = this.state
 
@@ -241,7 +239,7 @@ class ConsultantClient extends Component {
         });
         // open stream
         peer.on('stream', (currentStream) => {
-            this.myVideo.current.srcObject = currentStream;
+            this.urFriendVideo.current.srcObject = currentStream;
         });
         socket.on("callaccepted", (signal) => {
             this.setState({
@@ -511,7 +509,19 @@ class ConsultantClient extends Component {
                                                 Đang Gọi : {call.name ? call.name : nameFrom}
 
                                             </div>
-                                            <video className='video-call' ref={this.urFriendVideo} autoPlay controls ></video>
+                                            {isOpenCamera ? (
+                                                <video className='video-call' ref={this.urFriendVideo} autoPlay controls
+                                                    muted={isOpenMicro ? true : false}
+                                                ></video>
+                                            ) :
+                                                (<div className='video-call' >
+                                                    <h1>
+                                                        đã tắt camera
+
+                                                    </h1>
+                                                </div>)
+                                            }
+
                                             <div>
                                                 <div className='nav-controll-call-video'>
                                                     <ul className='controll-call-list'>
