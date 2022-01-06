@@ -300,7 +300,6 @@ class ConsultantClient extends Component {
                         this.setState({
                             stream: currentStream
                         });
-                        this.myVideo.current.srcObject = currentStream;
                         this.urFriendVideo.current.srcObject = currentStream;
                     })
                     .catch(e => {
@@ -312,7 +311,6 @@ class ConsultantClient extends Component {
                         this.setState({
                             stream: currentStream
                         });
-                        this.myVideo.current.srcObject = currentStream;
                         this.urFriendVideo.current.srcObject = currentStream;
                     })
                     .catch(e => {
@@ -332,7 +330,6 @@ class ConsultantClient extends Component {
                         this.setState({
                             stream: currentStream
                         });
-                        this.myVideo.current.srcObject = currentStream;
                         this.urFriendVideo.current.srcObject = currentStream;
                     })
                     .catch(e => {
@@ -344,7 +341,6 @@ class ConsultantClient extends Component {
                         this.setState({
                             stream: currentStream
                         });
-                        this.myVideo.current.srcObject = currentStream;
                         this.urFriendVideo.current.srcObject = currentStream;
                     })
                     .catch(e => {
