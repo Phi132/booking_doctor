@@ -34,6 +34,7 @@ class ConsultantClient extends Component {
         super(props);
         this.heightRef = React.createRef();
         this.myVideo = React.createRef();
+        this.urFriendVideo = React.createRef();
         this.connectionRef = React.createRef();
         this.scrollText = React.createRef();
         this.state = {
@@ -273,7 +274,7 @@ class ConsultantClient extends Component {
         // open camera
 
         peer.on("stream", (currentStream) => {
-            this.myVideo.current.srcObject = currentStream;
+            this.urFriendVideo.current.srcObject = currentStream;
         });
 
         peer.signal(call.signal);
@@ -293,29 +294,31 @@ class ConsultantClient extends Component {
         this.setState({
             isOpenCamera: !this.state.isOpenCamera
         }, () => {
-            // if (this.state.isOpenCamera) {
-            //     navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-            //         .then(currentStream => {
-            //             this.setState({
-            //                 stream: currentStream
-            //             });
-            //             this.myVideo.current.srcObject = currentStream;
-            //         })
-            //         .catch(e => {
-            //             console.log("loi khi mo camera", e);
-            //         })
-            // } else {
-            //     navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-            //         .then(currentStream => {
-            //             this.setState({
-            //                 stream: currentStream
-            //             });
-            //             this.myVideo.current.srcObject = currentStream;
-            //         })
-            //         .catch(e => {
-            //             console.log("loi khi mo camera false", e);
-            //         })
-            // }
+            if (this.state.isOpenCamera) {
+                navigator.mediaDevices.getUserMedia({ audio: this.state.isOpenMicro, video: true })
+                    .then(currentStream => {
+                        this.setState({
+                            stream: currentStream
+                        });
+                        this.myVideo.current.srcObject = currentStream;
+                        this.urFriendVideo.current.srcObject = currentStream;
+                    })
+                    .catch(e => {
+                        console.log("loi khi mo camera", e);
+                    })
+            } else {
+                navigator.mediaDevices.getUserMedia({ audio: this.state.isOpenMicro, video: false })
+                    .then(currentStream => {
+                        this.setState({
+                            stream: currentStream
+                        });
+                        this.myVideo.current.srcObject = currentStream;
+                        this.urFriendVideo.current.srcObject = currentStream;
+                    })
+                    .catch(e => {
+                        console.log("loi khi mo camera false", e);
+                    })
+            }
         })
     }
 
@@ -323,29 +326,31 @@ class ConsultantClient extends Component {
         this.setState({
             isOpenMicro: !this.state.isOpenMicro
         }, () => {
-            // if (this.state.isOpenMicro) {
-            //     navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-            //         .then(currentStream => {
-            //             this.setState({
-            //                 stream: currentStream
-            //             });
-            //             this.myVideo.current.srcObject = currentStream;
-            //         })
-            //         .catch(e => {
-            //             console.log("loi khi mo camera", e);
-            //         })
-            // } else {
-            //     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
-            //         .then(currentStream => {
-            //             this.setState({
-            //                 stream: currentStream
-            //             });
-            //             this.myVideo.current.srcObject = currentStream;
-            //         })
-            //         .catch(e => {
-            //             console.log("loi khi mo camera false", e);
-            //         })
-            // }
+            if (this.state.isOpenMicro) {
+                navigator.mediaDevices.getUserMedia({ audio: true, video: this.state.isOpenCamera })
+                    .then(currentStream => {
+                        this.setState({
+                            stream: currentStream
+                        });
+                        this.myVideo.current.srcObject = currentStream;
+                        this.urFriendVideo.current.srcObject = currentStream;
+                    })
+                    .catch(e => {
+                        console.log("loi khi mo camera", e);
+                    })
+            } else {
+                navigator.mediaDevices.getUserMedia({ audio: false, video: this.state.isOpenCamera })
+                    .then(currentStream => {
+                        this.setState({
+                            stream: currentStream
+                        });
+                        this.myVideo.current.srcObject = currentStream;
+                        this.urFriendVideo.current.srcObject = currentStream;
+                    })
+                    .catch(e => {
+                        console.log("loi khi mo camera false", e);
+                    })
+            }
         })
     }
 
@@ -510,7 +515,7 @@ class ConsultantClient extends Component {
                                                 Đang Gọi : {call.name ? call.name : nameFrom}
 
                                             </div>
-                                            <video className='video-call' ref={this.myVideo} autoPlay controls ></video>
+                                            <video className='video-call' ref={this.urFriendVideo} autoPlay controls ></video>
                                             <div>
                                                 <div className='nav-controll-call-video'>
                                                     <ul className='controll-call-list'>
