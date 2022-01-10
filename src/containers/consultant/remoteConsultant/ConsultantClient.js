@@ -181,7 +181,6 @@ class ConsultantClient extends Component {
         if (prevState.callAccpeted !== this.state.callAccpeted) {
             //scroll into view
             if (this.scrollText && this.scrollText.current) {
-                console.log("thuc hien scoll", this.scrollText.current);
                 this.scrollText.current.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
             }
 
@@ -216,19 +215,6 @@ class ConsultantClient extends Component {
     }
 
     callUserStart = (id) => {
-
-        // navigator.mediaDevices.getUserMedia({ audio: this.state.isOpenMicro, video: this.state.isOpenCamera })
-        //     .then(currentStream => {
-
-        //         this.setState({
-        //             stream: currentStream
-        //         });
-        //         this.myVideo.current.srcObject = currentStream;
-        //     })
-        //     .catch(e => {
-        //         console.log("loi khi mo camera", e);
-        //     });
-
 
         const { mySocketId, nameCaller, stream } = this.state
 
